@@ -2,7 +2,7 @@ import { Form, FormContainer, Input, SendButton, StyledLabel, RegisterButton } f
 
 function TelaLogin(props) {
 
-  const enviarLogin = () => {
+  const enviarLogin = (props) => {
     alert("E-mail não encontrado, será necessário fazer o cadastro!")
   }
 
@@ -17,7 +17,7 @@ function TelaLogin(props) {
           <Input type={"password"} />
         </StyledLabel>
         <SendButton onClick={enviarLogin}>Entrar</SendButton>
-        <RegisterButton >Cadastre-se</RegisterButton>
+        <RegisterButton onClick={()=>props.irPara(2)} >Cadastre-se</RegisterButton>
       </Form>
     </FormContainer>
   );
